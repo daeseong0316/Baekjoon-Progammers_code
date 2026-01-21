@@ -1,0 +1,7 @@
+SELECT ANIMAL_ID, NAME, 
+    CASE 
+        WHEN SEX_UPON_INTAKE = 'Neutered Male' OR SEX_UPON_INTAKE = 'Spayed Female' THEN 'O'
+        WHEN SEX_UPON_INTAKE = 'Intact Male' OR SEX_UPON_INTAKE = 'Intact Female' THEN 'X'
+    END AS '중성화'
+FROM ANIMAL_INS 
+ORDER BY ANIMAL_ID ASC;
